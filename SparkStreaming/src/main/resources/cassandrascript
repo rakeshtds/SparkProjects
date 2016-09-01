@@ -1,0 +1,9 @@
+CREATE KEYSPACE sparkstreaming WITH replication = {'class': 'SimpleStrategy', 'replication_factor': 1};
+
+use sparkstreaming ;
+
+CREATE TABLE sparkstreaming.countrystats (date text ,country text,count int, PRIMARY KEY (date, country));
+
+CREATE TABLE sparkstreaming.statestats (date text ,state text,count int, PRIMARY KEY (date, state));
+
+CREATE TABLE sparkstreaming.citystats (date text ,city text,status text,count int, PRIMARY KEY (date, city,status));
